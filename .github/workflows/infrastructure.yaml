@@ -44,3 +44,7 @@ jobs:
       - name: Terraform Plan
         working-directory: ./infrastructure/azure
         run: terraform plan
+
+      - name: Terraform Apply
+        working-directory: ./infrastructure/azure
+        run: terraform apply -auto-approve
