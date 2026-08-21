@@ -172,9 +172,8 @@ resource "azurerm_kubernetes_cluster" "wiz_aks" {
   network_profile {
     network_plugin    = "azure"
     load_balancer_sku = "standard"
-
-    # NEW FIX: Explicitly set the internal service IPs to avoid overlapping with the VNet
     service_cidr      = "172.16.0.0/16"
     dns_service_ip    = "172.16.0.10"
   }
+}
   
