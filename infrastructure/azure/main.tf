@@ -101,7 +101,7 @@ resource "azurerm_network_interface" "mongo_nic" {
     name                          = "internal"
     # NOTE: Ensure the subnet name matches what is in your code from earlier!
     # If your subnet block is named differently (e.g., azurerm_subnet.public), update it here:
-    subnet_id                     = azurerm_subnet.wiz_subnet_1.id 
+    subnet_id                     = azurerm_subnet.public_subnet.id 
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.mongo_pip.id
   }
